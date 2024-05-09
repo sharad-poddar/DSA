@@ -9,13 +9,13 @@ void toggleBit(int num, int pos){
     num = num ^ (1 << pos-1);
     cout<<num<<endl;
 }
-
 int main(){
     int num = 10;
     int pos = 3;
     toggleBit(num, pos);
     return 0;
 }
+
 
 
 /*
@@ -30,15 +30,17 @@ void lastBit(int num){
    cout<<num<<endl;
    return;
 }
-
 int main(){
     int num = 10;
     lastBit(num);
     return 0;
 }
 
+
+
 /*
  * check if the number is power of 2 or not 
+ * if the number is power of 2 then (n) & (n-1) is always an 0
 */
 #include<iostream>
 using namespace std;
