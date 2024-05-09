@@ -1,6 +1,7 @@
 /*
  * every number in the array appearing twice
  * we have to find the number which appears once
+ * this problem can be solved using map as increasing the count for number
 */
 #include<iostream>
 using namespace std;
