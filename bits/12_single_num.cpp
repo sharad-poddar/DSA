@@ -16,9 +16,9 @@ pair<int, int> singleNum(vector<int> &v){
         ans = ans ^ v[i];
     }
 
-    // 1 0 1 0
-    // 1 0 0 1
-    // 1 0 0 0
+    // 1 0 1 0 -> ans
+    // 1 0 0 1 -> ans - 1
+    // 1 0 0 0 -> (ans) & (ans - 1)
     // 0 0 1 0 -> getting the right most bit
     int rightMost = (ans & (ans - 1)) ^ ans;
 
