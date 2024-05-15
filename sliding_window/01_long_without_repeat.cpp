@@ -39,3 +39,6 @@ int main(){
     cout<<ans<<endl;
     return 0;
 }
+
+// time complexity is o(n);
+// space complexity is o(n);
