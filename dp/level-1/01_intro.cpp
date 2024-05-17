@@ -41,4 +41,4 @@ int main(){
 }
 
 // time complexity is o(n)
-// space complexity is o(n)
+// space complexity is o(n+1)
