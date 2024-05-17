@@ -18,23 +18,25 @@ int longestStringWithoutRepeatition(string &s){
         
         // this condition is important as if the inital element is already out then 
         // why would we go for it
-        if(!m[s[i]] || j >= m[s[i]]){
+        if(m.find(s[i]) == m.end() || j > m[s[i]]){
             m[s[i]] = i;
             maxi = max(i-j+1, maxi);
+            cout<<maxi<<endl;
             i++;
             continue;
+        }else{
+            j = m[s[i]] + 1;
+            m[s[i]] = i;
+            maxi = max(i-j+1, maxi);
+            cout<<"_"<<maxi<<endl;
+            i++;   
         }
-        
-        j = m[s[i]];
-        j++;
-        maxi = max(i-j+1, maxi);
-        i++;
     }
     return maxi;
 }
 
 int main(){
-    string s = "cadbzabcd";
+    string s = "abcabcbb";
     int ans = longestStringWithoutRepeatition(s);
     cout<<ans<<endl;
     return 0;
@@ -42,3 +44,5 @@ int main(){
 
 // time complexity is o(n);
 // space complexity is o(n);
+
+
